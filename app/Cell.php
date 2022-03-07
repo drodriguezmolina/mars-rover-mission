@@ -13,12 +13,12 @@ class Cell
         $this->column = $column;
     }
 
-    public function toString(): String
+    public function toString(): string
     {
         return 'Column: ' . $this->column . ' Row: ' . $this->row;
     }
 
-    public function fillRover(): Void
+    public function fillRover(): void
     {
         if($this->isEmpty()) {
             $this->rover = true;
@@ -30,7 +30,7 @@ class Cell
         return $this->rover;
     }
 
-    public function fillObstacle(): Void
+    public function fillObstacle(): void
     {
         if($this->isEmpty()){
             $this->obstacle = true;
@@ -42,17 +42,9 @@ class Cell
         return $this->row;
     }
 
-    public function getColumn()
+    public function getColumn(): string
     {
         return $this->column;
-    }
-
-    private function isEmpty(): bool
-    {
-        if(!$this->hasObstacle() && !$this->rover){
-            return true;
-        }
-        return false;
     }
 
     public function empty(): void
@@ -63,5 +55,13 @@ class Cell
     public function hasObstacle(): bool
     {
         return $this->obstacle;
+    }
+
+    private function isEmpty(): bool
+    {
+        if(!$this->hasObstacle() && !$this->rover){
+            return true;
+        }
+        return false;
     }
 }
