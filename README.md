@@ -6,7 +6,7 @@ Do these tests to check that rover is in good condition
 1. Run the following commands
 
         composer install
-        php artisan test
+        php artisan test OR vendor/bin/phpunit
 
 ## To start the journey
 
